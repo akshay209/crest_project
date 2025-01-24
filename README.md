@@ -1,6 +1,6 @@
 # Crest Project
 
-## **Step 1: Clone the Project**
+## **Step 1: Clone the Project
 Clone the repository from GitHub:
 
 ```
