@@ -45,7 +45,7 @@ Then after login in to Django admin create a new user other than admin user
 python manage.py runserver
 ```
 
-The server will run on http://127.0.0.1:8000/
+The server will run on http://127.0.0.1:8000/    
 
 Note: You can import the postman collection and use the api requests
 
@@ -65,8 +65,8 @@ example:
 You can use New user by creating it directly from admin panel 
 
 # 2.Create a Product (POST)
-Endpoint: http://127.0.0.1:8000/api/products/
-Request Body (form-data in Postman or JSON):
+Endpoint: http://127.0.0.1:8000/api/products/    
+Request Body (form-data in Postman or JSON):     
 
 {
     "title": "Sample Product",
@@ -78,26 +78,26 @@ Request Body (form-data in Postman or JSON):
 }
 
 # 3.Retrieve Products (GET)
-Endpoint: http://127.0.0.1:8000/api/products/
+Endpoint: http://127.0.0.1:8000/api/products/     
 
-Example filters:
+Example filters:     
 
-?title=Sample
-?price=100
-?ordering=created_on
-?search=Sample
+?title=Sample     
+?price=100     
+?ordering=created_on     
+?search=Sample     
 
 # 4.Update a Product (PUT/PATCH)
-Endpoint: http://127.0.0.1:8000/api/products/<id>/
-{
-    "title": "Updated Product Title"
-}
+Endpoint: http://127.0.0.1:8000/api/products/<id>/     
+{     
+    "title": "Updated Product Title"     
+}     
 
 
 # 5.Delete a Product (DELETE)
-Endpoint: http://127.0.0.1:8000/api/products/<id>/
-(This performs a soft delete by setting is_active to False.)
+Endpoint: http://127.0.0.1:8000/api/products/<id>/     
+(This performs a soft delete by setting is_active to False.)     
 
 # 6.Export Products (GET)
-Endpoint: http://127.0.0.1:8000/api/export/
-This will download an Excel file with all product data.
+Endpoint: http://127.0.0.1:8000/api/export/     
+This will download an Excel file with all product data.     
