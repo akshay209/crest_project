@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "89ff7aff-c86c-460a-ae3d-5b8afbf1fa4c",
+		"name": "crest_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28546512"
+	},
+	"item": [
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3ODI5Nzc3LCJpYXQiOjE3Mzc4Mjk0NzcsImp0aSI6IjMzNjZmYjRlYmM3NjRjY2NhZjY3NDhhNWUwYmNiYWFlIiwidXNlcl9pZCI6MX0.Vij_ZRHT0iq4EMd2BQCkuzIBdQUI4lBWVolJ_ifmJk0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"New Blog\",\r\n  \"description\": \"This is a new product\",\r\n  \"price\": \"150.00\",\r\n  \"discount\": 5.0,\r\n  \"ssn\": \"987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read blog",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3ODI5OTY5LCJpYXQiOjE3Mzc4Mjk2NjksImp0aSI6ImUxODUyOGJhNDg3YTRjODRiMGUwYWNhNGM5NzVhZWQxIiwidXNlcl9pZCI6Mn0.rD6-cN3FmChgH0VRUktTcJNrtfRHml1nmhpdCXNoXY4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"New Blog\",\r\n  \"description\": \"This is a new product\",\r\n  \"price\": \"150.00\",\r\n  \"discount\": 5.0,\r\n  \"ssn\": \"987654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update blog",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3ODY0MzkxLCJpYXQiOjE3Mzc4NjQwOTEsImp0aSI6ImUxY2JlOTMwZDgyZjRkNzc4Y2Y2MjE1MzI4Y2Y0MDQ4IiwidXNlcl9pZCI6MX0.m8z9CL1Lwvv6ImKj2Rn6De4avjUSPpJudQpmunj3bV4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Blog\",\r\n  \"description\": \"This is a new product\",\r\n  \"price\": \"100.00\",\r\n  \"discount\": 25.0,\r\n  \"ssn\": \"98765234321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete blog",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3ODY0MzkxLCJpYXQiOjE3Mzc4NjQwOTEsImp0aSI6ImUxY2JlOTMwZDgyZjRkNzc4Y2Y2MjE1MzI4Y2Y0MDQ4IiwidXNlcl9pZCI6MX0.m8z9CL1Lwvv6ImKj2Rn6De4avjUSPpJudQpmunj3bV4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Blog\",\r\n  \"description\": \"This is a new product\",\r\n  \"price\": \"100.00\",\r\n  \"discount\": 25.0,\r\n  \"ssn\": \"98765234321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3ODY0MzkxLCJpYXQiOjE3Mzc4NjQwOTEsImp0aSI6ImUxY2JlOTMwZDgyZjRkNzc4Y2Y2MjE1MzI4Y2Y0MDQ4IiwidXNlcl9pZCI6MX0.m8z9CL1Lwvv6ImKj2Rn6De4avjUSPpJudQpmunj3bV4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Blog\",\r\n  \"description\": \"This is a new product\",\r\n  \"price\": \"100.00\",\r\n  \"discount\": 25.0,\r\n  \"ssn\": \"98765234321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"1",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete blog Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM3ODY4NTk2LCJpYXQiOjE3Mzc4NjgyOTYsImp0aSI6ImU1MWIxYWM2ZjBmYzQ4ZTFhNGE3NjI1Yjc1YzA4NGJjIiwidXNlcl9pZCI6MX0.JSKFrFClPU8UqWdI6ZDTqjkqqWq2Ubj_aj8Ef0iMBiE",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/export-blog/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"export-blog",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 26 Jan 2025 05:15:02 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/vnd.openpyxl"
+						},
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=\"blog_data.xlsx\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5040"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xmlM�M\u000b�0\f\u0006�Rv���\u001e�\u000eD=����.u��)m����\u0004?nyy�\u001b�.�\"&��E�.�m32�\r@�#�>�ʡ���{�1݁��\u001a\u000f�\u001f\u001e\u0003âm׀�1\f8�ⷰ��.FguϖBw�:Q&��X4:�'\u001f��\u001c\n\u0010�z%>�\u0013K9�+\u0005��S�\u0015S���o�d\u0005�\u0007�\u0017PK\u0007\bF�MH�\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011\u0000\u0000\u0000docProps/core.xml���N�0\f�_eʽuҩ;DY.C�@Bb\u0012�[�x[E�D�Q���-[\u0007�\u001b�����V��҆�O)DL�`^\r����q�NDQ\u0002d{Bor9\u0012�\u0018\u001eB��g:B4��\u001c\u0011*�7���3d`\u0012\u0016q1����E\u0019?R;\u000b�\u0005l�cG\u0019D)��\u0012&��l���\u001cr�P}ߗ�z�ƍ\u0004�>><��\u0017M��t\u0016�V�J��PHz�(��V������*�[�\u0013$�#n�5yY����LW��\u000b.�j��\u0014�������\u0013���C�\u000f�U�\u0015��7�\tPK\u0007\b�ny��\u0000\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000xl/theme/theme1.xml�Z[s�8\u0014~��xg�m\u000b�6���\u0013siv۴���N\u001f�\u0011X�lyd���G6\u0010˖\r�M��<\u0004,���EG��8y��.b膈��x`�/�ֻ�/��W2$\u0011A0\u0019����\n�L^�Zi\u0000�8}�\u0013\u0012�܂�\bKx\u0014��\\�[\u001a/#����V�il�\u0018Gd`}^,h@�TQZo_ ��\u001f3�\u0015�T�e�\u0001\u0013WA&�����l����>e��:\u001d2�n0\u001bX �o��NZ��T���jg?Vk���H���}�\u0005�I���\u0015\b2\r;:�X�v|��ퟌ��t4m\u001a���x8��ҋp\u001c\u0004�Q���l��A\t��i�d��ڮ����SO��}��h�\n�[O�kw�ӎ�ƭ�x\r��O�î�ƫ�t�i&'��k��\u0016hBF��z\u0012\u0015��@� \u0000Xpv���\u0003�^)�u�\u001a�\u001d��A\\�X�9�\u0011���\u0004�i�\u0019�4Fr��\u0005\u000e\u00007��LP|�A����\\���)�P\u001a\b�ȁ�G�!�ܯ����ɤ3z�}:�k�i�\u0001����ϓ�s�䟧��MB�p�,\t��#[a�'n;\u0013r:\u001cgB|�����%2���\n�N<g\u001fV��]��䞌r#���X}�OGn#ש��\"הF$E��-��\u00118�I\r2\u0013?\b���jP\u001c\u0002�\t1�����Ƭ\u0011�\u0013}��\b�ߍ���o�=W�XIڄ�\u0010F\u001a�s�s�l�\u0007�F��U�ܣ�X\u0015\u0001�\u0018�4�5,��x���<\u001d\u0013\u0012͔\u000b\u0006A��$&\u0012�9~MH\u0013�+�����@�/$�J��i�#�t&��3\u001a�F�\u001bu�h�<z�\u0005��5\n\u001c�\u001b\u001d\u0002g\u001b�F!�i��\u001e�$����\u0011+B>b\u00196\u001ar�\u0016��q��`Z\u0012��xNҴ\u0011�Y�5�>`��͑u�֑\u000e\u0011�^7B>b΋�\u0011�\u001e�8J���qX\u0004��^�I���f��~��3l,��G�\u0017J�\u000f&�?�24\u0007��Y\t��Vj���4>�\u001e2\n\u0005�\u001e>�zx\n7�ƼP��{\u0001���7«���9.}ϥ��=�ҷ7#}g�Ӌ[�Fn[���1��4.(cWr���T��)�9����h>�����$���Y-#\u0016�K��A$�����*�\t�d[%\t�T�e7�\u0012�B\u001bn�S�J��对(�<[�鯡t>,��<_��\u000b3C�rK궔��&8J���pN\u001e�\f;g<�\u001d�w�\u001d5��]v�#�0S�C�\u001aB�\u0003m���:8����\n�R�o����x\u001a�9�\u0004�}�Wm�������Q���<�\u001dǈ�!���C�y{_�g��P4\u0014ml�$,F�`���,\u0014�d`-�\u0007��Q\u0002�RU`1[�\u0003+��|L�E�p�\\_�ђ�ۦe�n�)w\u0019m\"R9�i�\u0013g���e��U\u001d�U[�j=�\u0015N��Y�ȟ\f\u0011N\u0016\u000b\u0012Hc�\u0017�J��\u0019S��+I�U8�E3�\u0012�\u0018����qNS�\u0012v�\u000f\u00022��9�ze1g���-\f\t,[�Y\u0012�M]��盜�z\"v��w�`��p�G\u000f�;�_�]C�~����n�;HL�y�\u0011\u0001tE\u0002#�\u001c\u0006\u0016\u00172�P\u0006\u0013\u0001͔�D�\u0002�d�\u001c���\u000b��\f�)\u0015έ>9E,��N^�%\u0012\u0014��\f\u0005!\u0017r���jw���,�m�T2d�\u0017�C��=3rC�T%��&\u000b���Tͻ\u001a�&`K�zn�-'��^�=�\u0017=F��\u001e��s�z��E��X�\u001e�2�9p�:�\u0003^�\u0013,C�~�}���\u0011�b���O�%�;�{� ���ۤ���\f|ԫZ�d+\u0011?K\u0007|\u001f�\u0006c�[�4_�\u0014b������1\fy�X�\f�f8߇E�\u001a3Ջ�9�\noA�@�?��\rh�\r4\u001c�\u0005^1��6��N\n<���\r��Ď�틿\u0001PK\u0007\b�\\�#\u0010\u0006\u0000\u0000�'\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0000\u0000\u0000xl/worksheets/sheet1.xmluS�N�0\f��*\u001f@\u0006\u0012\u0017Mm��\u0001�\u000141.�Y�\u0011I\\\u0012������C�\u0014�9�ǎ��E�\u0019j\u0000J~�q!\u00135Q3�2\u00145X\u0015ΰ\u0001�7\u0015z��]����ʎd���L��Uډ<�b+���#�\u001d�|\u0012v�*�{\u000b\u0006�L��C�Eok�\u00022O\u001b��5�[�\u0004v�1O�-���%\u001e�L�Χ˞�!�5���Nb3\u001b���<���Ě�@A1���\u001b�`L�ĕ|퓊��<�\u000f������\n0G�K�3q#�\u0012*�3��\u0012�=]���P���c���l�\u0016ш�\f�.>Қ<�5+Q��H%�~�d�Gߎ�_5\u0019\u0018 ��\b\u000b\b��M|�\u0001�b���\u0018ҹ\u001b�ѡ���\u0001��\u0018g�~\u001e�?��缃\u0004e2\u001b\u0012Y��ޚr�%yB���#�+���V��\u0018�8���\u0007��\u0019�\u000eaӭ�\u0006��vf�_\u0003|\u0004�}�HG'����PK\u0007\byݳz\u0001\u0000\u0000y\u0003\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\r\u0000\u0000\u0000xl/styles.xml�Vۊ�0\u0010�\u0015�\u000f�����$y�!Ph���C_�XN\u0004����$��j$綛�R�V���9:3g�1Ϊw'ɟ\u000f��䨤������S���\u0003W��`:�=�\u001a����g}g9kz\")�-f�\"SL�t�҃�*�';3h�Ngi�mV����<�\u0001��)��2�N+&EmE\\̔��\u0018_���Hc\u0013��p�S��\u0015\u0017�G������Ɔh\u0016˄G�\u0013\u000b)/*\u0016i\flV\u001ds�[��N$��{l�_N�W���4_|Lo\u0018�����6�޵\u001bC���#�\u0015�C0���Q\u001b�\"�\u0011lo4�Jδ��w\\�g:�\u001f�]�c�č�҄=��ϦW5�1��P��t1����īq�\u0007ߐ\u000e���8�dy+��?�o\u0004\\j\u0007%w�/фFe�~�\u0011�79�AH'��\u001dD�p��;�߱�\u000f�]\u0001���-\u001b�{����j�\u0018TyY�D�����W:�yq�S_L�\u001fyS�����L��ˎW`����\u0002\u0010dE\u0010@\u0004�ZP\u0006dE\u001e��?���}E\u0010*\\>����Ĭ�{\bUᆵ\u0000��\u0017h�,�(��V�c\u0019\u0015�â�\u001fH\b\u0015\u0012\u0007֢j��\u0013\u0003016�\rxʓc\u0003[�\u0018Q����\u0013\u0004��8e\t\u0006\u0000�\"\u000e<\u00148Q$\u0002ԢQ\u0003�<�s�\n�k>\u0001�%�hH��\u0016\u0005ڨ�np^�%��\u0004\u0010�@F�C�^�\t\b� !\u0010���!}�=��߹���q�\u001bPK\u0007\b�\u0005�FR\u0002\u0000\u0000G\n\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000_rels/.rels��Kn\u00021\f@�\u0012e_L��\u00021�ذC�\u000b��磙đc������ h\u0011K���-�\u000f4�v\u001csۥl�0�\\�V5�\u0000�k)`�q�X*5K@-�4����\u0010,��%�-�nַLs�I�\n��s�ew\n\u0014�\u0001��Ú#JCZ�q�3K����\nԚ������5���� ��GEp,���L�v��>�ݾ��cb�x����Ш\u0014=���0����E\t&o��\u0005PK\u0007\b�G��\u0000\u0000\u0000\u0016\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000xl/workbook.xml���N�0\fE��\u0007�n�IL�\u001e`\u0002&!@\f�=m��Z\u0012W�������0i/<%�vN���H�/��ɧ5��9W�H;OS_6`���\u0016\\���VK(y�R]c\t+*;\u000bN�i��R\u0006�\u0005��\u0006[�\u0006�X�eЕo\u0000Ě\u0001e5:�\\���8I�+\u0012(�OQ��\u0016���\u0006b�\u001c�c�\u0006�+W�݀J,:�x�*W�J|C�'b<�\u0013m6%�1��\f�-�`y!o��\u000f]�^\u0011]��̹�e\u0001X#{�'z�\u000e&\u000f\u0010���\u0013z@#�+-��Ե�v=&�H�r��\u0018��i\u000b��3�K�C\u001dm\u0004y]\r�$��\u0002�\u001cC���\u000fuDUP���%�|l�`e�j<z���fr\u001b\u0002t��\u0007��=��~���]~\u0003PK\u0007\bU�b�6\u0001\u0000\u0000,\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\u0000\u0000\u0000xl/_rels/workbook.xml.rels��=\u000e�0\f��\u0012�\u0000\u0018�ԡ\u0002�.�\u0015\u0017���\u0011�D����\u001b�\u0000H\u001d�0Yϖ��dg/4�{;Q�;\u0012�h&�e��\u001e\u0000�;\u001c\u0015E��\u0014&���� }\u000bN�A�\bi\u001c��\u001f\u0019�ȎLQ-\u000e�!ڦ�5>�~�8�\u000f0|�\u001f�Cd)*�[�\\�l�6�Z�(��(�\\��N���\u0012\u0011/\u0006i���z�?�]��W�5�G��!����\u000bPK\u0007\b3�㺭\u0000\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\u0000\b\u0000�U:Z\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000[Content_Types].xml���N�0\f�_��uj38p@�.�+��\u000b��]��boto�۲J��\r�K����s�%��c\u0004�:g=VyC\u0014\u001f�@Հ�X�\b�#uHN\u0012����R�r\u0007�~�|\u0010*x\u0002O\u0005�\u001a�z��Z�-e�\u001do�\t��\u0013X̳�1�gU���\u001a%�����\u000fJ�E(�r���D\\pB����!�+�T�z����l+\u0013�H�i��\u0002�h\u0001��\u001ag�\fum\u0014���KJ�\t��\u0006��-G��\u00154�a���n`��H��m\n\u0011ٵ\u0004�l髋�B��\\9�d��'��q\r�V8O�#�v�\u0004Ű�\u001f�w�'�[\u001ay\u000f���{֯���O\r��=�?\u0001PK\u0007\b��B�\u001b\u0001\u0000\u0000�\u0003\u0000\u0000PK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:ZF�MH�\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001\u0000\u0000\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Z�ny��\u0000\u0000\u0000�\u0001\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001�\u0000\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Z�\\�#\u0010\u0006\u0000\u0000�'\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001�\u0001\u0000\u0000xl/theme/theme1.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Zyݳz\u0001\u0000\u0000y\u0003\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000��M\b\u0000\u0000xl/worksheets/sheet1.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Z�\u0005�FR\u0002\u0000\u0000G\n\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001\u0012\n\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Z�G��\u0000\u0000\u0000\u0016\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001�\f\u0000\u0000_rels/.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:ZU�b�6\u0001\u0000\u0000,\u0002\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001�\r\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Z3�㺭\u0000\u0000\u0000�\u0001\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001\u000b\u000f\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\u0000\b\u0000�U:Z��B�\u001b\u0001\u0000\u0000�\u0003\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0001\u0000\u0010\u0000\u0000[Content_Types].xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\t\u0000\t\u0000>\u0002\u0000\u0000\\\u0011\u0000\u0000\u0000\u0000"
+				}
+			]
+		}
+	]
+}
