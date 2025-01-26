@@ -50,54 +50,75 @@ The server will run on http://127.0.0.1:8000/
 Note: You can import the postman collection and use the api requests
 
 ## Api
-
-# 1. Token Generation
-method - POST 
-url - http://127.0.0.1:8000/api/token/
-
-json data use the super user details for admin user
-example:
+For admin user create super user and use it as admin 
+or
+# 1. Register User
+Endpoint : http://127.0.0.1:8000/api/register/
+Method - POST
+Body(Json) - 
 {
-    "username": "admin",
-    "access": "admin"
+  "username": "user1",
+  "password": "password123"
 }
 
-You can use New user by creating it directly from admin panel 
-
-# 2.Create a Product (POST)
-Endpoint: http://127.0.0.1:8000/api/products/    
-Request Body (form-data in Postman or JSON):     
-
+# 2. Login Api
+Endpoint : http://127.0.0.1:8000/api/login/
+Method - Post
+Body(JSON) - 
 {
-    "title": "Sample Product",
-    "description": "Product Description",
-    "price": 299.99,
-    "discount": 10,
-    "ssn": "123-456-789",
-    "image": "test.jpg"
+  "username": "admin",
+  "password": "admin"
 }
 
-# 3.Retrieve Products (GET)
-Endpoint: http://127.0.0.1:8000/api/products/     
+# 3. Create Blog
+Endpoint - http://127.0.0.1:8000/api/blogs/
+Method - POST
+Headers - 
+Authorization:Bearer <JWT ACCESS TOKEN>
+Content-Type:application/json
+Body(JSON)- 
+{
+  "title": "New Blog test",
+  "description": "This is a new test product ",
+  "price": "250.00",
+  "discount": 15.0,
+  "ssn": "98765234321"
+}
 
-Example filters:     
-
-?title=Sample     
-?price=100     
-?ordering=created_on     
-?search=Sample     
-
-# 4.Update a Product (PUT/PATCH)
-Endpoint: http://127.0.0.1:8000/api/products/<id>/     
-{     
-    "title": "Updated Product Title"     
-}     
+# 4. Read Blog
+Endpoint - http://127.0.0.1:8000/api/blogs/
+Method - GET
+Headers - 
+Authorization:Bearer <JWT ACCESS TOKEN>
+Content-Type:application/json
 
 
-# 5.Delete a Product (DELETE)
-Endpoint: http://127.0.0.1:8000/api/products/<id>/     
-(This performs a soft delete by setting is_active to False.)     
+# 5. Update Blog
+Endpoint - http://127.0.0.1:8000/api/blogs/1/
+Method - PUT
+Headers - 
+Authorization:Bearer <JWT ACCESS TOKEN>
+Content-Type:application/json
+Body(JSON)- 
+{
+  "title": "Updated test",
+  "description": "This is a new test product ",
+  "price": "250.00",
+  "discount": 15.0,
+  "ssn": "98765234321"
+}
 
-# 6.Export Products (GET)
-Endpoint: http://127.0.0.1:8000/api/export/     
-This will download an Excel file with all product data.     
+# 6. Delete Blog
+Endpoint - http://127.0.0.1:8000/api/blogs/1/
+Method - DELETE
+Headers - 
+Authorization:Bearer <JWT ACCESS TOKEN>
+Content-Type:application/json
+
+# 7. Export Blog
+Endpoint - http://127.0.0.1:8000/api/export-blog/
+Method - GET
+Headers - 
+Authorization:Bearer <JWT ACCESS TOKEN>
+Content-Type:application/json
+
